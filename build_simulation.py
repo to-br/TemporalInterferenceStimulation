@@ -5,7 +5,7 @@ import nest
 
 def build_simulation(sim_time=1000, second_sine=False, noisy=True, 
                   f1=10.0, a=100.0, SD=250.0,
-                  delay_mean=1, delay_sd=1, 
+                  delay_mean=1, delay_sd=1, C=100,
                   V_thresh=-50.0, E_m=-60.0, tau_m=10,
                   seed=np.random.randint(1,1e+6), beat=20, resolution=0.25):
     """This function creates:
@@ -32,7 +32,6 @@ def build_simulation(sim_time=1000, second_sine=False, noisy=True,
     neuron = nest.Create("iaf_psc_alpha")
     
     
-    C = 100 
     
     neuron.set(V_th = V_thresh)
     neuron.set(V_m = E_m)
