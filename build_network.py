@@ -60,7 +60,7 @@ def build_network(Cm=100,sim_time=1000, second_sine=False, noisy=True, common_no
     
     params = {
         "C_m": Cm,
-        "tau_m": 10.0,
+        "tau_m": tau_m,
         "E_L": -60.0,
         "V_reset": E_m,
         "V_th": V_thresh,
